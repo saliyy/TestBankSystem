@@ -1,0 +1,25 @@
+﻿<Window x:Class="bankyep.EnterFiled"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bankyep"
+        mc:Ignorable="d"
+        Title="EnterField" Height="341.4" Width="363.2" FontFamily="Segoe UI Semibold" FontSize="16">
+    <Grid Margin="0,0,425.6,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="17*"/>
+        </Grid.RowDefinitions>
+        <Canvas Margin="0,0,0,95.8" Height="141" Grid.RowSpan="2" VerticalAlignment="Bottom">
+            <Label Content="Логин" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="35" Canvas.Left="25" Canvas.Top="25"/>
+            <Label Content="Пароль" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="35" Canvas.Left="25" Canvas.Top="85"/>
+            <TextBox x:Name="LoginEnter" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" Canvas.Left="120" Canvas.Top="25"/>
+            <TextBox x:Name="PasswordEnterField" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" Canvas.Left="120" Canvas.Top="85"/>
+            <Button x:Name="EnterButton" Content="Войти" Height="35" Width="175" Canvas.Left="90" Canvas.Top="160" Foreground="#FF21C82F" Click="EnterButton_Click"  />
+        </Canvas>
+        <Label Content="Имя" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="35" Margin="24.8,24.8,-94.8,0"/>
+        <TextBox x:Name="NameEnter" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" Margin="120,30,-305,0"/>
+    </Grid>
+</Window>
+

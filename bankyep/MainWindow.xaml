@@ -1,0 +1,46 @@
+﻿<Window x:Class="bankyep.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bankyep"
+        mc:Ignorable="d" HorizontalContentAlignment="Stretch"
+        Title="MainWindow" Height="600" Width="1000" FontFamily="Bahnschrift Light" FontWeight="Bold" Loaded="Window_Loaded" FontSize="16">
+    <Grid>
+        <TabControl>
+            <TabItem x:Name="DataBaseField" Margin="-2,-2,-33.2,0" Header="DataBase">
+                <Canvas Margin="0,0,-2,0">
+                    <DataGrid x:Name="DataBaseGrid" HorizontalAlignment="Stretch" Height="435" Width="727" Canvas.Left="65" Canvas.Top="57">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="150" Binding="{Binding Id}"  Header="ID"/>
+                            <DataGridTextColumn Width="150" Binding="{Binding Name}"  Header="Имя"/>
+                            <DataGridTextColumn Width="150" Binding="{Binding Face}" Header="Лицо"/>
+                            <DataGridTextColumn Width="100" Binding="{Binding creditHistory}" Header="кр. история"/>
+                            <DataGridTextColumn Width="350" Binding="{Binding Cash}" Header="Счёт"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Загрузить" Height="40" Width="155" Canvas.Left="807" Canvas.Top="59" Click="Button_Click"/>
+                </Canvas>
+            </TabItem>
+            <TabItem x:Name="EnterRegistrationField" Header="Вход\Регистрация " Margin="33.2,-2,-64.8,0.8">
+                <Canvas>
+                    <Button x:Name="RegisterCaller" Content="Регистрация" Height="50" Width="190" Canvas.Left="627" Canvas.Top="6" Foreground="#FF14AD16" Click="RegisterCaller_Click"></Button>
+                    <Button x:Name="EnterCaller" Content="Войти" Height="50" Width="147" Canvas.Left="827" Canvas.Top="6" Foreground="#FF174AB0" Click="EnterCaller_Click"></Button>
+                    <Label x:Name="LabelEventler" Content="Вы уже вошли в систему. Можете перейти в свой личный кабинет " Canvas.Left="97" Canvas.Top="311" Width="860" Height="70" FontFamily="Segoe UI Black" FontSize="24"/>
+                </Canvas>
+            </TabItem>
+            <TabItem x:Name="MainRoomFeild" Header="Личный Кабинет" Margin="65,-5,-69.2,0.8">
+                <Canvas>
+                    <Label x:Name="NameLabel" Content="Имя" Canvas.Left="12" Canvas.Top="7" Width="225"/>
+                    <Label x:Name="PersonMoneyLabel" Content="Счёт" Canvas.Left="12" Canvas.Top="53" Width="195"/>
+                    <Label x:Name="CreditHistoryLabel" Content="Кр.История" Canvas.Left="12" Canvas.Top="108" Width="140"/>
+                    <Label x:Name="FaceLabel" Content="Лицо: " Canvas.Left="12" Canvas.Top="160" Width="175"/>
+                    <Button Content="Сделать перевод" Height="45" Width="165" Canvas.Left="782" Canvas.Top="26" FontWeight="Bold" Click="Button_Click_1"/>
+                    <Button Content="Кредит" Canvas.Left="782" Canvas.Top="91" Height="45" Width="170" FontWeight="Bold"/>
+                </Canvas>
+            </TabItem>
+
+        </TabControl>
+
+    </Grid>
+</Window>
